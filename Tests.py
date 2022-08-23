@@ -35,3 +35,30 @@ def test_cycle_symbols_slash_to_space():
 
 def test_cycle_symbols_two_times():
     assert cph.cycle(cph.cycle('.')) == ' '
+
+def test_cycle_more_symbols_colon_to_semicolon():
+    assert cph.cycle(':') == ';'
+
+def test_cycle_more_symbols_questionMark_to_atSign():
+    assert cph.cycle('?') == '@'
+
+def test_cycle_more_symbols_atsign_to_colon():
+    assert cph.cycle('@') == ':'
+
+def test_cycle_more_symbols_two_times():
+    assert cph.cycle(cph.cycle('@')) == ';'
+
+def test_cycle_even_more_symbols_lBracket_to_backslash():
+    assert cph.cycle('[') == '\\'
+
+def test_cycle_even_more_symbols_accent_to_lBracket():
+    assert cph.cycle('`') == '['
+
+def test_cycle_even_more_symbols_two_times():
+    assert cph.cycle(cph.cycle('`')) == '\\'
+
+def test_cycle_last_symbols_of_ascii_table_curly_lBracket_to_bar():
+    assert cph.cycle('{') == '|'
+
+def test_cycle_last_symbols_of_ascii_table_tilde_to_curly_lBracket():
+    assert cph.cycle('~') == '{'
